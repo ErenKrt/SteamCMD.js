@@ -6,11 +6,11 @@ If your NodeJS supports sub library(s) you can use this library for access the [
 
 ### Basic setup
 ```sh
-npm install node-steamcmd
+npm install steamcmd-wrapper
 ```
 ### Import library & ready to work
 ```js
-var {SteamCMD} = require('node-steamcmd');
+var {SteamCMD} = require('steamcmd-wrapper');
 
 (async function(){
     var Cmd= new SteamCMD({BinDir:"steamcmd.exe"}); // Windows 
