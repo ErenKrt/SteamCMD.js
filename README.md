@@ -25,6 +25,6 @@ var {SteamCMD} = require('node-steamcmd');
     })
 })
 ```
-> [More example](https://github.com/ErenKrt/Node-SteamCMD/Examples)
+> [More example](https://github.com/ErenKrt/Node-SteamCMD/tree/main/Examples)
 ---
 Developer: &copy; [ErenKrt](https://www.instagram.com/ep.eren/)
