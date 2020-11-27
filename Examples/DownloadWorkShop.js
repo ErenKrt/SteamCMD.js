@@ -14,6 +14,17 @@ var Cmd= new SteamCMD({Bindir:"./test/steamcmd.exe"});
 
     if(Login.type==0){ // Logged In | Response Codes at SteamCMD.js
         console.log(Login);
+
+        var WorkShopDownload= await Cmd.WorkshopDownload({
+            AppID:730,
+            WorkshopID:308490450,
+            Cb:function(data){
+                console.log(data);
+            }
+        });
+
+        console.log(WorkShopDownload);
+
     }else{
         console.log(Login);
     }

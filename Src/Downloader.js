@@ -1,7 +1,7 @@
 const { default: Axios } = require("axios");
 const path = require('path');
 const fs= require('fs');
-const ArchiveUtils =require('./Utils/Archive');
+const Helpers =require('./Utils/Helpers');
 
 class Downloader{
     static GetDownloadInfo(){
@@ -39,22 +39,13 @@ class Downloader{
     }
     static async GetMaxSize(){
         var {Url} = this.GetDownloadInfo();
-
-        var CancelToken = Axios.CancelToken.source();
-
         try {
             var {data,headers} = await Axios({
                 url:Url,
                 method:'get',
-                responseType:'stream',
-                cancelToken:CancelToken
             });
 
-            var Size= headers['content-length'];
-
-            CancelToken.cancel();
-
-            return Size;
+            return Number(headers['content-length']);
         } catch (error) {
             throw new Error(error);
         }
@@ -102,7 +93,7 @@ class Downloader{
                 data.removeListener('data',UpdateSize);
             }
             
-            await ArchiveUtils.UnArchiveAndDelete(DownloadedArchive,path.resolve(DownPath));
+            await Helpers.UnArchiveAndDelete(DownloadedArchive,path.resolve(DownPath));
             
         }
 
