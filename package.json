@@ -1,0 +1,30 @@
+{
+  "name": "steamcmd.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/steamCMD.cjs",
+  "module": "./dist/steamCMD.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/steamCMD.js",
+      "require": "./dist/steamCMD.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.5.2",
+    "vitest": "^0.34.1"
+  }
+}
