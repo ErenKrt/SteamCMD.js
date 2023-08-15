@@ -1,6 +1,10 @@
-import index from './index'
-import { expect, test } from 'vitest';
+import { test } from 'vitest'
+import steamCMD from './index'
 
-test('index test',()=>{
-    expect(index.sum(4, 7)).toBe(11);
-})
+var client= new steamCMD({ bin: "D:\\Tools\\steam\\steamcmd.exe" });
+
+test("a",async ()=>{
+    await client.create();
+});
+
+console.log(client);

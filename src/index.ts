@@ -1,5 +1,2 @@
-import sum from './sum'
-
-export default {
-    sum
-}
+import steamCMD from './steamCMD'
+export default steamCMD;
