@@ -1,5 +1,10 @@
 {
   "name": "steamcmd.js",
+  "author": {
+    "name": "Eren Kurt",
+    "email": "kurteren07@gmail.com",
+    "url": "https://erencan.dev"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
