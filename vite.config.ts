@@ -15,6 +15,5 @@ export default defineConfig({
       fileName: 'SteamCMD'
     },
   },
-  plugins: [dts()],
-  test: {}
+  plugins: [dts()]
 });
