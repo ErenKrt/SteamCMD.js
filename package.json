@@ -1,19 +1,22 @@
 {
-  "name": "steamcmd-wrapper",
-  "version": "1.5.3",
-  "description": "SteamCMD wrapper for NodeJS",
-  "main": "Src/Wrapper.js",
+  "name": "steamcmd.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --build",
+    "test": "vitest"
   },
-  "keywords": [],
-  "author": "EpEren",
-  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.4",
+    "vitest": "^1.2.0"
+  },
   "dependencies": {
-    "axios": "^0.21.0",
-    "extract-zip": "^2.0.1",
-    "node-pty": "^0.9.0",
-    "tar": "^6.0.5"
-  },
-  "homepage": "https://github.com/ErenKrt/Node-SteamCMD"
+    "node-pty": "^1.0.0"
+  }
 }
