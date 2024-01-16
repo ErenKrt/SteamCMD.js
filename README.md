@@ -46,7 +46,7 @@ With [npm](https://npmjs.org/) installed, run
 ```
 Import
 ```js
-import steamCMD = require('steamcmd.js');
+import steamCMD from 'steamcmd.js';
 ```
 
 ## Features
